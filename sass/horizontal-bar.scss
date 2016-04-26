@@ -1,0 +1,118 @@
+@import "globalColours";
+@import "devices";
+// @if DEVICE == 'ios'
+@import "specificDimensions-ios";
+//  @endif
+// @if DEVICE != 'ios'
+@import "specificDimensions-all";
+//  @endif
+@import "globalDimensions";
+@import "equidistant_mixin";
+@import "visibility";
+
+$buttonWidth: $buttonHeight;
+$buttonCellWidth: 20%;
+$menuHeightFoldout: $toolBarHeight;
+$menuHeightTotal: $menuHeightFoldout;
+$zindex: 9;
+
+.horizontal-bar-container {
+  background-color: $navBarBackgroundColor;
+  position: fixed;
+  height: $menuHeightTotal;
+
+  width: 100%;
+  padding-left: -10px;
+  z-index: $zindex;
+
+  a {
+    vertical-align: middle;
+    color: $navBarTextColor;
+    font-size: $fontSize;
+    font-weight: 600;
+    text-decoration: none;
+    //text-align: center;
+    padding-top: 1rem;
+    height: 2rem;
+    width: 22%;
+    text-align: center;
+  }
+
+  a i {
+    padding-left: 3px;
+    position: relative;
+    top: -5px;
+    font-size: 1.5rem;
+  }
+
+  a:hover {
+    background: $navBarHoverColor;
+  }
+
+  a:active {
+
+    background: $navBarAnchorBackgroundColor;
+    color: black;
+  }
+
+  a.disabled {
+    color: grey;
+  }
+
+  .horizontal-bar-buttongroup {
+    background: $navBarBackgroundColor;
+    width: 100%;
+    height: $menuHeightFoldout;
+    left: 0;
+
+    overflow: hidden;
+
+  }
+
+  .horizontal-bar-buttongroup a:last-child {
+    @include rightmost-item;
+  }
+
+}
+
+.horizontal-bar-buttongroup {
+  @include equidist-container;
+  font-size: $fontSize;
+  height: $menuHeightTotal;
+}
+
+#homepage-toggle {
+  background-color: $bottomMenuListToggleBackgroundColor;
+}
+
+.horizontal-bar-buttongroup:after {
+  @include equidist-container-after;
+}
+
+.horizontal-bar-container.top {
+  top: $navbarTop;
+  padding-top: $navbarPaddingTop;
+  box-shadow: 0px 3px 7px #888888;
+}
+
+.horizontal-bar-container.bottom {
+  bottom: 0;
+//  width: 50%;
+  @include respond-to(wide-screens) {
+    width: 100%;
+  }
+  box-shadow: 1px -3px 7px #888888;
+  #filter-selection-all {
+    font-size: 25px;
+    padding-top: 0px;
+    margin-top: 8px;
+    i {
+      font-style: normal;
+    }
+  }
+}
+
+.filter-selection-active {
+  color: $bottomMenuListToggleBackgroundColor
+  //  text-shadow:2px 1px black;
+}

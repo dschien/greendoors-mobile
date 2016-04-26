@@ -1,0 +1,21 @@
+<div class="measure">
+    {{#if_lteq this.measure compare=15}}
+        <span class="measure-head" style="background-color: {{this.color}};">{{this.measure}}</span>
+    {{else}}
+        <span class="measure-head"></span>
+    {{/if_lteq}}
+    <div class="measure-body">
+        <a class="measure-anchor" data-id="{{this.measure}}">{{this.name}}</a>
+        <br>
+        {{#loop this.disruption}}
+            <a class="disruption"><i class="fa fa-wrench"></i></a>
+        {{/loop}}
+        {{#if this.cost}}
+            <a class="cost"><i class="fa fa-gbp"></i> {{this.cost}}</a>
+        {{/if}}
+    </div>
+</div>
+
+<hr>
+
+

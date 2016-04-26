@@ -1,0 +1,50 @@
+<div id="about" class="scroll-wrapper">
+    <div class="scroll-content">
+        <h1>About</h1>
+
+        <p>
+            Frome Open Homes is an eco-homes event that showcases the work that householders have done to retrofit their
+            homes, making them more energy efficient and fit for the future. This app provides an overview of the houses
+            involved in this year’s event (15-16 March) by showing their location and providing information about the
+            installed retrofitting measures. When registered, users are able to save houses to a shortlist, make notes,
+            contact householders, and scan associated QR codes (available at the houses during the weekend of the
+            event). Whilst certain app features are designed to be used during the Frome Open Homes weekend, information
+            provided about the houses and the ability to contact householders will be accessible throughout the year.
+        </p>
+
+        <p>
+            If you use the scanning function to record the QR codes of the measures you are interested in during the
+            Frome Open Homes weekend, a personalised report will be sent to you after the event. This will include more
+            information about the measure itself, the suppliers or contractors used by the household, and additional
+            information about how you can improve your home’s energy efficiency.
+        </p>
+
+        <h2>Research</h2>
+
+        <p>
+            The Digital Green Doors project is a collaboration between Frome Open Homes and the University of Bristol.
+            It is investigating how mobile technology can help people learn about retrofitting and encourage them to
+            reduce their own energy usage. If you would like to take part in the University of Bristol’s research study
+            and have not yet confirmed your interest, please contact Elaine at <a href="mailto:Elaine.Massung@bristol.ac.uk">Elaine.Massung@bristol.ac.uk</a>. Gift
+            vouchers will be available to those who complete the study.
+        </p>
+
+        <h2>Householders</h2>
+
+        <p>We would like to ask all users to respect the privacy of householders. Please be courteous in any emails to
+            householders, and please do not try to contact the householder outside of the app. Also, please note that
+            some houses are only open on Saturday or Sunday, or have set tour times – please be respectful and mindful
+            of this when visiting houses.
+        </p>
+
+
+        <p>
+            <button id="login-register-button" class="topcoat-button" onclick="(function(){ require(['js/services/EmailService'],
+        function(emailService){
+                emailService.getSingleton().openEmailComposer('green-doors+research@bristol.ac.uk','Greendoors Research Participation');
+        })})();">Send Email
+            </button>
+        </p>
+        <button id="info-back-button" class="topcoat-button" onclick="window.history.back()">Back</button>
+    </div>
+</div>

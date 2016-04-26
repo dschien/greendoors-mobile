@@ -1,0 +1,59 @@
+input[type="checkbox"], input[type="radio"] {
+  display: none
+}
+
+.checkbox-left:before, .checkbox-right:after {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  width: 35px;
+  height: 32px;
+  background-position: left -37px;
+  background-repeat: no-repeat;
+  background-size: 37px;
+  content: " "
+}
+
+.checkbox-left:before {
+  float: left;
+  margin-right: 15px
+}
+
+.checkbox-right:after {
+  float: right
+}
+
+.dark-checkbox:before, .dark-checkbox:after {
+  background-image: url("../lib/topcoat-addon/dark-sprites2x.png")
+}
+
+.light-checkbox:before, .light-checkbox:after {
+  background-image: url("../lib/topcoat-addon/light-sprites2x.png")
+}
+
+.checkbox-left, .checkbox-right, .radio-left, .radio-right {
+  display: inline-block;
+  margin: 5px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none
+}
+
+input[type="checkbox"]:checked + .checkbox-left:before, input[type="checkbox"]:checked + .checkbox-right:after {
+  background-position: left -2px
+}
+
+input[type="checkbox"]:disabled + label {
+  pointer-events: none;
+  cursor: default;
+  opacity: .3
+}
+
+.slide-switch-container input[type="checkbox"]:checked + label .on-off {
+  margin-left: 0
+}
+
+.slide-switch-container input[type="checkbox"]:checked + label .switch {
+  right: -2px
+}

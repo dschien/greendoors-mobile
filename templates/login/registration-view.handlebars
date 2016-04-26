@@ -1,0 +1,75 @@
+<div id="registration-view" class="scroll-wrapper">
+    <div class="scroll-content">
+
+        <div class="login-header">
+            <img src="img/logo.gif" class="login-logo" width="50">
+
+            <h2 class="login-title">Greendoors</h2>
+        </div>
+
+        <div id="registration-form" class="form" parsley-validate parsley-bind>
+
+            <!--<label for="reg-name-tf">:</label>-->
+            <input type="text" id="reg-name-tf"
+                   name="username"
+                   class="reg-name-tf topcoat-text-input"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   placeholder="Username"
+                   parsley-trigger="change"
+
+                   parsley-remote="{{server}}"
+                   parsley-minlength="4"
+
+                   required
+                    />
+
+            <!--<label for="reg-email-tf">Email:</label>-->
+            <input type="email" id="reg-email-tf" class="email-tf topcoat-text-input" autocorrect="off"
+                   parsley-type="email" parsley-trigger="change" placeholder="Email"
+                   pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,4}$"
+                   autocapitalize="off" required/>
+
+
+            <!--<label for="reg-pass-tf">Password:</label>-->
+            <input id="reg-pass-tf" type="password" class="password-field pass-tf topcoat-text-input"
+                   autocorrect="off" parsley-minlength="4" parsley-trigger="change" placeholder="Password"
+                   autocapitalize="off" required/>
+
+            <!--<label for="reg-pass-2-tf">Repeat Password:</label>-->
+            <input id="reg-pass-2-tf" type="password" class="password-field pass-tf topcoat-text-input"
+                   autocorrect="off" parsley-equalto="#reg-pass-tf" parsley-trigger="change"
+                   placeholder="Repeat Password"
+                   autocapitalize="off" required/>
+
+            <!--<div class="checkbox-container">-->
+
+            <!--<label for="checkbox-reg-ack-desc" class="light-checkbox checkbox-left">-->
+            <!--<input type="checkbox" name="news" id="checkbox-reg-ack-desc" checked/>-->
+
+            <!--<div class="topcoat-checkbox__checkmark"/>-->
+            <!--I am happy to be contacted by Bristol Green Doors with a monthly newsletter and promotional-->
+            <!--material.-->
+            <!--</label>  -->
+
+
+            <!--</div>-->
+
+            <div class="checkbox-container">
+                <label for="checkbox-reg-ack-research" class="light-checkbox checkbox-left">
+                    <input name="reasearch" type="checkbox" id="checkbox-reg-ack-research" checked/>
+
+                    <div class="topcoat-checkbox__checkmark"/>
+                    I am happy to be contacted by the University of Bristol for research purposes involving this app.
+                    Financial incentives are available if you participate in follow up research evaluations.
+                </label>
+
+            </div>
+            <div class="center">
+                <button id="reg-cancel-button" class="topcoat-button">Cancel</button>
+                <button id="reg-register-button" class=" topcoat-button--cta">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>

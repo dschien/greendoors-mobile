@@ -1,0 +1,26 @@
+<div id="menu" class="scroll-wrapper">
+    <div class="scroll-content menu">
+        <button class="topcoat-button" onclick="Backbone.history.navigate('main', true);">Back to App</button>
+        <!--<button class="topcoat-button" onclick="window.location.hash='#routes'">Routing</button>-->
+        <button id="info-about-button" class=" topcoat-button" onclick="window.location.hash='info/menu/about'">About
+        </button>
+        <!--<button id="info-instructions-button" class=" topcoat-button" onclick="window.location.hash='#info/instructions'">Instructions</button>-->
+        <button id="info-cheatsheet-button" class="topcoat-button" onclick="window.location.hash='info/menu/help'">
+            Instructions
+        </button>
+        <button id="info-feedback-button" class=" topcoat-button" onclick="window.location.hash='#info/menu/feedback'">
+            Feedback
+        </button>
+        <button id="info-privacy-button" class=" topcoat-button" onclick="window.location.hash='#info/menu/privacy'">
+            Privacy
+            Policy
+        </button>
+        {{#if guestMode}}
+            <button class="topcoat-button"
+                    onclick="Backbone.history.navigate('register', {replace:true, trigger:true});">Register
+            </button>
+        {{/if}}
+        <button class="topcoat-button" onclick="window.location.hash='#info/menu/settings'"><i class="fa fa-cogs"></i>Settings
+        </button>
+    </div>
+</div>

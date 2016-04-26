@@ -1,0 +1,11 @@
+@import "globalDimensions";
+
+#info button, #settings button {
+  display: block;
+  width: 300px;
+  margin: 5px auto;
+}
+
+#instructions td {
+  border-bottom: 1px dotted #000000;
+}

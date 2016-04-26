@@ -1,0 +1,170 @@
+@import "globalDimensions";
+@import "globalColours";
+@import "devices";
+
+#mapcanvas {
+  // @deprecated
+  width: 100%;
+  position: absolute;
+  //  top: $pagePaddingTop;
+  //  bottom: $paddingBottom;
+  height: 100%;
+}
+
+#mainmap {
+  // label
+}
+
+.mapcanvas {
+  @extend #mapcanvas;
+}
+
+.mapcanvas-small {
+  width: 100%;
+  height: 350px;
+}
+
+// default state is closed.
+.mapmarker-closed {
+  color: slategray;
+}
+
+.mapmarker-open {
+  color: #00A000;
+}
+
+.mapmarker-position {
+  color: dodgerblue;
+}
+
+.marker-house-number {
+  position: relative;
+  //  left: -25px;
+  color: $starColor;
+  font-size: 25px;
+
+}
+
+.removeRouteOverlayControl {
+  background-color: #e5e9e8;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 2px;
+  //  color: white;
+
+  box-shadow: 1px 2px 3px #888888;
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 35px;
+  width: 40px;
+  padding-left: 5px;
+}
+
+.numberCircle {
+  border-radius: 50%;
+  //  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+
+  background: $fromeLight;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+
+  font: 20px Arial, sans-serif;
+  z-index: 6;
+}
+
+.numberCircle.selected {
+  @include respond-to(wide-screens) {
+    background: $fromeLight;
+//    background: #04422C;
+  }
+}
+
+//$starDimA: 100px;
+//$dimB: 70px;
+//$dimC: 80px;
+//$dimD: 30px;
+//
+//$starTop: -45px;
+//$starLeft: -65px;
+//$starAfterLeft: -105px;
+//$starAfterTop: 3px;
+
+$starDimA: 10px;
+$dimB: 7px;
+$dimC: 8px;
+$dimD: 3px;
+$starTop: -4.5px;
+$starLeft: -6.4px;
+$starAfterLeft: -10.5px;
+$starAfterTop: 0.3px;
+
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: $starColor;
+  width: 0px;
+  height: 0px;
+  border-right: $starDimA solid transparent;
+  border-bottom: $dimB solid $starColor;
+  border-left: $starDimA solid transparent;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  z-index: 7;
+
+}
+
+.star-five:before {
+  border-bottom: $dimC solid $starColor;
+  border-left: $dimD solid transparent;
+  border-right: $dimD solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: $starTop;
+  left: $starLeft;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  z-index: 7;
+
+}
+
+.star-five:after {
+  position: absolute;
+  display: block;
+  color: $starColor;
+  top: $starAfterTop;
+  left: $starAfterLeft;
+  width: 0px;
+  height: 0px;
+  border-right: $starDimA solid transparent;
+  border-bottom: $dimB solid $starColor;
+  border-left: $starDimA solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  content: '';
+  z-index: 7;
+}
+
+.mapIcon {
+  position: relative;
+  left: 15px;
+  top: 15px;
+  color: $starColor;
+}

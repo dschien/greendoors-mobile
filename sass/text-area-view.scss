@@ -1,0 +1,37 @@
+@import "globalColours";
+
+
+#contact-view, #note-view, .text-area-view {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: $pageBackgroundColor;
+  top: 0;
+  padding-top: 20px;
+  .scroll-content {
+    height: 100%;
+  }
+  h1 {
+    display: inline-block;
+  }
+  .topcoat-overlay-buttons {
+    display: inline-block;
+    button {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      padding: 0 0.5rem;
+
+    }
+  }
+  textarea {
+    -webkit-box-sizing: border-box;
+    border: 1px solid #999999;
+    width: 95%;
+    height: 50%;
+    margin: 5px 0;
+    padding: 3px;
+    font-size: 1rem;
+  }
+
+}

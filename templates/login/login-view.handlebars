@@ -1,0 +1,45 @@
+<div id="login-view" class="scroll-wrapper">
+    <div class="scroll-content">
+        <!--<div class="scroll">-->
+        <!--<div class="centered-image">-->
+        <!--<img src="img/login.png" width="320">-->
+        <!--</div>-->
+        <div class="login-header">
+            <img src="img/logo.gif" class="login-logo" width="50">
+
+            <h2 class="login-title">Greendoors</h2>
+        </div>
+        <div id="login-form" class="form" parsley-validate parsley-bind>
+
+
+            <!--<label for="username">Username:</label>-->
+            <input type="text"
+                   id="login-username-text"
+                   class="username-text topcoat-text-input"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   parsley-minlength="4"
+                   placeholder="Username"
+                   required/>
+
+            <!--<label for="password">Password:</label>-->
+            <input id="login-password-field" type="password" parsley-trigger="change"
+                   class="password-text topcoat-text-input" placeholder="Password" autocorrect="off"
+                   parsley-minlength="4"
+                   autocapitalize="off" required/>
+
+
+            <!--</div>-->
+        </div>
+        <div>
+            <button id="login-login-button" class="topcoat-button--cta"> Login</button>
+            <a id="password-reset" class="forget-password" href="#passwordReset">Forget username or password?</a>
+        </div>
+
+        <button id="login-register-button" class="topcoat-button">Register</button>
+        <div class="field-container-longtext">
+            <a id="login-continue-unregistered" class="continue-unregistered-link">Continue without registering</a>
+        </div>
+
+    </div>
+</div>

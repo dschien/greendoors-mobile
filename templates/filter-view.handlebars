@@ -1,0 +1,43 @@
+<div id="filter-view" class="scroll-wrapper">
+    <div class="scroll-content">
+
+        <div class="filter-buttons">
+            <button id="filter-apply-button" class="topcoat-button--cta">Apply</button>
+            <button id="filter-reset-button" class="topcoat-button--cta">Reset</button>
+        </div>
+
+        <span class="view-title">Show houses that have installed:</span>
+        <br>
+        <!--print all categories-->
+        {{#each this.measureCategories}}
+            <span class="measure-category">{{this.name}}</span>
+            {{#each this.measures}}
+                {{>filterCheckboxItem this }}
+            {{/each}}
+        {{/each}}
+
+        <div>
+            {{>filterCheckboxItem this.other }}
+        </div>
+
+        <!--<div class="filter-group">-->
+        <!--<label for="filter-distance">Maximum distance from current location</label> <br>-->
+        <!--<input type="number" id="filter-distance" class="topcoat-text-input" data-filter-bind="distance"-->
+        <!--value="{{distance}}"/> <br>-->
+        <!--</div>-->
+
+        <div class="filter-group">
+            <label for="filter-beds">Minimum number of bedrooms</label> <br>
+            <input type="number" id="filter-beds" class="topcoat-text-input" data-filter-bind="bedrooms"
+                   value="{{bedrooms}}"/> <br>
+        </div>
+
+        <!--<div class="filter-group">-->
+        <!--<input type="checkbox" id="filter-open" {{checked this.open}} data-filter-bind="open"/>-->
+        <!--<label for="filter-open" class="light-checkbox checkbox-left">Show only houses open 28-29 Sept.</label>  -->
+        <!--</div>-->
+
+        <button id="filter-apply-button" class="topcoat-button--cta">Apply</button>
+        <button id="filter-reset-button" class="topcoat-button--cta">Reset</button>
+    </div>
+</div>

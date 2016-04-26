@@ -1,0 +1,43 @@
+<div data-id="{{id}}" class="scroll-wrapper house-view">
+    <!--<div class="scroll-content">-->
+    <div class="scroll-content">
+        <div class="home-address column">{{address}}</div>
+        <div class="home-header">
+
+            <!--<img src="data:image/jpeg;base64,{{image}}" class="home-image column" width="100" height="100"/>-->
+            <img src="{{baseUrl}}img/houses/house_{{this.id}}.png" class="home-image column" width="100" height="100"/>
+
+            <div class="house-actions"></div>
+
+            <div class="properties">
+                <dl>
+                    <dt>House Type:</dt>
+                    <dd>{{type_enum type}}</dd>
+                    <dt>House Age:</dt>
+                    <dd>{{age_enum age}}</dd>
+                    <dt>Open:</dt>
+                    <dd>{{open_enum day}}</dd>
+                    <dt>Time:</dt>
+                    <dd>{{time_enum time}}</dd>
+                    {{#if_eq 1 compare=booking}}
+                        <dt>Booking required</dt>
+                        <dd></dd>
+                    {{/if_eq}}
+
+                    {{#if this.comments}}
+                        <dt>Notes</dt>
+                        <dd>
+                            {{{ this.comments }}}
+                        </dd>
+                    {{/if}}
+                </dl>
+            </div>
+
+        </div>
+
+        <div class="measures"></div>
+
+        <div class="houseNotes"></div>
+
+    </div>
+</div>

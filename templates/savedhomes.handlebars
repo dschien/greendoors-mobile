@@ -1,0 +1,22 @@
+{{>navbar}}
+<input type="checkbox"> Show only saved houses on map
+
+<ul>
+    {{#each this}}
+        <li>
+            <div class="home-header" data-id="{{this.id}}">
+                <img src="img/house_{{this.id}}.png" class="home-image"/>
+
+                <div class="home-address">
+                    {{this.address}}
+                </div>
+                <div class="home-actions">
+                    <a class="remove-favourite topcoat-button">Remove</a>
+                    <a href="#note/{{this.id}}" class="topcoat-button">Note</a>
+                </div>
+            </div>
+        </li>
+    {{else}}
+        <p class="empty">No content</p>
+    {{/each}}
+</ul>

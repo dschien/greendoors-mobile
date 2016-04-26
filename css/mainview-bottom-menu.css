@@ -1,0 +1,90 @@
+.equidist-button {
+    display: inline-block
+}
+
+.bottom-foldout-container {
+    position: fixed;
+    height: 3rem;
+    width: 100%;
+    z-index: 9
+}
+
+.bottom-foldout-container a {
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.12)
+}
+
+.bottom-foldout-container a:hover {
+    background: #a93a70
+}
+
+.bottom-foldout-container a:active {
+    background: #a93a70;
+    color: #a93a70
+}
+
+.bottom-foldout-container .bottom-foldout-menu-buttongroup {
+    text-align: justify;
+    min-width: 320px;
+    background: #a93a70;
+    width: 100%;
+    height: 3rem;
+    left: 0;
+    overflow: hidden
+}
+
+.bottom-foldout-container .bottom-foldout-menu-buttongroup:after {
+    content: '';
+    width: 100%;
+    display: inline-block
+}
+
+.bottom-foldout-container .bottom-foldout-button {
+    float: right;
+    bottom: 3rem;
+    margin: 0px 10px;
+    z-index: 9;
+    background-color: #a93a70;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 3.5rem;
+    height: 3.5rem;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    border: none
+}
+
+.bottom-foldout-container .bottom-foldout-menu-buttongroup a {
+    padding: 0.2em;
+    border-left: 1px solid #a93a70
+}
+
+.bottom-foldout-container .bottom-foldout-menu-buttongroup a:last-child {
+    padding-right: 10px
+}
+
+.bottom-foldout-menu-buttongroup {
+    font-size: 2rem;
+    height: 3rem
+}
+
+.bottom-foldout-container.bottom-foldout-container-open {
+    bottom: 0px
+}
+
+.bottom-foldout-container {
+    bottom: -3rem
+}
+
+.bottom-foldout-container {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}

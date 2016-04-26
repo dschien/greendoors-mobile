@@ -1,0 +1,53 @@
+@import "globalDimensions";
+@import "devices";
+
+html {
+  height: $canvasHeight;
+}
+
+body {
+  font-family: source-sans-pro, serif;
+  font-size: $fontBaseSize;
+  margin: 0;
+  padding: 0;
+  height: $canvasHeight;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+h1 {
+  font-size: $fontBaseSize * 1.5;
+  padding: 20 0 0 0;
+  margin: 0px;
+}
+
+h2 {
+  font-size: $fontBaseSize * 1.2;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+.scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: $pagePaddingTop;
+  bottom: $paddingBottom;
+  left: 0px;
+  right: 0px;
+  //padding-bottom: $paddingBottom;
+}
+
+li > a.tappable-active {
+  color: #fff;
+  background-color: #4286f5;
+}
+
+#content {
+  height: $canvasHeight;
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+<div class="scroll" class="scroll-wrapper">
+    <div class="scroll-content">
+        <h1>HELP</h1>
+
+
+        <p>If you run into technical problems while using the app, please submit the following form.</p>
+        <button id="login-register-button" class="topcoat-button" onclick="(function(){ require(['js/services/EmailService'],
+        function(emailService){
+                emailService.getSingleton().openEmailComposer('green-doors+help@bristol.ac.uk','Greendoors App Problem');
+        })})();">Send Email
+        </button>
+        <button id="info-back-button" class="topcoat-button" onclick="window.history.back()">Back</button>
+    </div>
+</div>

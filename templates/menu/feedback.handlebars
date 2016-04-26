@@ -1,0 +1,15 @@
+<div class="scroll" class="scroll-wrapper">
+    <div class="scroll-content">
+        <h1>FEEDBACK</h1>
+
+        <p>Please share any comments, questions or queries you have about the app using the email button below. You can also email us if you are interested in joining the research study.</p>
+
+            <button id="login-register-button" class="topcoat-button" onclick="(function(){ require(['js/services/EmailService'],
+        function(emailService){
+                emailService.getSingleton().openEmailComposer('Elaine.Massung@bristol.ac.uk','The app is awesome!');
+        })})();">Send Email
+            </button>
+        </p>
+        <button id="info-back-button" class="topcoat-button" onclick="window.history.back()">Back</button>
+    </div>
+</div>

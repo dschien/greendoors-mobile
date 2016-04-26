@@ -1,0 +1,23 @@
+@mixin equidist-container {
+  text-align: justify;
+  min-width: 320px;
+}
+
+@mixin equidist-item($itemCount) {
+  display: inline-block;
+  //width: 320px / $itemCount;
+}
+
+@mixin equidist-container-after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+@mixin rightmost-item {
+  padding-right: 10px;
+}
+
+.equidist-button {
+  @include equidist-item(4);
+}

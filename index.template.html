@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+    <meta charset="utf-8"/>
+    <!-- Enables or disables automatic detection of possible phone numbers in a webpage in Safari on iOS.
+    By default, Safari on iOS detects any string formatted like a phone number and makes it a link that calls the number. Specifying telephone=no disables this feature.
+    -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--prevent pinch and zoom-->
+
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <!--<meta name="viewport" content="user-scalable=no, target-densityDpi=medium-dpi"/>-->
+
+    <!-- @if DEVICE == 'ios' !>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi"/>
+    <!-- @endif -->
+    <!-- @if DEVICE != 'ios' -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <!-- @endif -->
+    <!--<meta name="viewport" content="user-scalable=no, width=320"/>-->
+
+    <!-- libs -->
+    <link href="lib/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/topcoat-mobile-light.css" rel="stylesheet" type="text/css">-->
+
+    <!-- specific -->
+    <link href="css/media.css" rel="stylesheet" type="text/css">
+    <link href="css/filter.css" rel="stylesheet" type="text/css">
+
+    <link href="css/house.css" rel="stylesheet" type="text/css">
+    <link href="css/infoview.css" rel="stylesheet" type="text/css">
+
+    <link href="css/listview.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="css/mapview.css" rel="stylesheet" type="text/css">
+    <link href="css/message-bar.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+
+    <link href="css/routes.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/text-area-view.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/top-coat-addons.css" rel="stylesheet" type="text/css">-->
+    <link href="css/topcoat-mobile-light.css" rel="stylesheet" type="text/css">
+    <link href="css/wait.css" rel="stylesheet" type="text/css">
+    <link href="css/welcome.css" rel="stylesheet" type="text/css">
+    <link href="css/validation.css" rel="stylesheet" type="text/css">
+
+    <!-- @if DEVICE != 'BROWSER' !>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- @endif -->
+
+
+    <link href="css/horizontal-bar.css" rel="stylesheet" type="text/css">
+    <link href="css/pages.css" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript" src="lib/handlebars.runtime.js"></script>
+    <script type="text/javascript" src="lib/HandlebarHelpers.js"></script>
+    <script src="lib/require.js"></script>
+
+
+    <script>
+        greendoors = {
+            version: '<!-- @echo version -->'
+        }
+    </script>
+
+    <!-- @if true !>
+    <script>
+        define('settings', function () {
+            return {
+                server : '<!-- @echo SERVER -->'
+    };
+    });
+    <!-- @echo REQUIRE -->
+    // <!--
+    </script>
+    <!-- @endif -->
+
+
+    <!-- @if DEVICE = 'BROWSER' -->
+    <script type="text/javascript" src="cordova-polyfill.js"></script>
+    <!-- @endif -->
+
+
+    <!-- @exclude -->
+    <script>
+        define('settings', function () {
+            return {
+//                server : "https://greendoors-dev.cs.bris.ac.uk/"
+//                server : "https://greendoors.cs.bris.ac.uk/"
+//                server: "https://127.0.0.1:8000/"
+//                server: "https://127.0.0.1:8002/"
+//                server: "https://dgd:8443/",
+                server: "https://dgd/"
+            };
+        });
+        //        require.config({ paths: {  "config": "optimized"  }, catchError: true });
+        require(["config"]);
+        //        require(["./app/MainApp"]);
+    </script>
+    <!-- @endexclude -->
+
+    <title>Green Doors</title>
+
+</head>
+<body>
+
+<div id="navbar"></div>
+<div id="content"></div>
+<!--<button id="start" style="position:absolute; top:50px">Start</button>-->
+
+<!-- @if false !>
+<!--<script src="http://jsconsole.com/remote.js?dschien35153"></script>-->
+<!-- @endif -->
+</body>
+</html>

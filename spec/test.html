@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Discover London</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="css/styleguide.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/top-coat-addons.css">
+    <link rel="stylesheet" type="text/css" href="../css/topcoat-mobile-light.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/discover.css">-->
+
+
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="application/javascript">
+        function login() {
+            function setOAuthHeader(xhr, token) {
+
+            }
+
+            var posting = $.post('https://dgd/oauth2/access_token',
+                    {client_id: 'bfad28d8534d3b71eb88', client_secret: '08c740d526a438b66cdd3adf30d06d85b42ee315',
+                        grant_type: 'password', username: 'schien', password: '9tzbFVkdeTRU1gNzwc5w', scope: 'write' });
+            posting.done(function (data) {
+                        console.log('done:' + data.access_token);
+
+                        var oauthString = 'OAuth ' + data.access_token;
+                        $.ajaxSetup({
+                            beforeSend: function (xhr) {
+                                console.log(oauthString);
+                                xhr.setRequestHeader('Authorization', oauthString);
+                            }
+                        });
+
+                        // get all scans
+                        var getscans = $.get('https://dgd/api/v1/scans/');
+//                        var getscans = $.ajax({url: 'https://dgd/api/v1/scans/', headers: { 'Authorization': 'OAuth ' + data.access_token }, type: 'POST'});
+                        getscans.done(function (data) {
+                            var created = data.created;
+                            console.log('get done:' + data.created);
+                        });
+
+                        getscans.fail(function (data) {
+                            console.log('get fail:' + data.responseJSON);
+                            console.log('get fail:' + data.responseText);
+                        });
+
+
+                        // post new scan
+                        var postscans = $.post('https://dgd/api/v1/scans/', {user: 1, text: '0002'});
+//                        var postscans = $.ajax({url: 'https://dgd/api/v1/scans/', headers: { 'Authorization': 'OAuth ' + data.access_token }, type: 'POST'});
+                        postscans.done(function (data) {
+                            console.log('done:' + data.responseJSON);
+                            console.log('post done:' + data.responseText);
+                        });
+
+                        postscans.fail(function (data) {
+                            console.log('fail:' + data.responseJSON);
+                            console.log('post fail:' + data.responseText);
+                        });
+
+                    }
+            )
+            ;
+            posting.fail(function (data) {
+                console.log('fail:' + data);
+            });
+            posting.always(function (data) {
+                console.log('always:' + data);
+            });
+        }
+    </script>
+
+
+</head>
+
+<body onload="login();">
+<div class="dark-header-bar">
+    <p class="header-bar-title">Settings</p>
+</div>
+<div class="light">
+    <p class="sub">Attractions</p>
+
+    <p>
+        <input type="checkbox" id="checkbox-1" checked/>
+        <label for="checkbox-1" class="light-checkbox checkbox-right">Siteseeing</label>
+        <br/>
+
+        <input type="checkbox" id="checkbox-2"/>
+        <label for="checkbox-2" class="light-checkbox checkbox-right">Restaurants</label>
+        <br/>
+        <input type="checkbox" id="checkbox-3"/>
+        <label for="checkbox-3" class="light-checkbox checkbox-right">Shopping</label>
+    </p>
+
+    <hr>
+    <p class="sub">Location Aware</p>
+
+    <p>Allow location access:
+
+    <div class="slide-switch-container">
+
+
+        <input type="checkbox" name="light-switch" id="slideswitch-light" checked>
+        <label class="light-slide-switch" for="slideswitch-light">
+            <div class="on-off"></div>
+            <div class="switch"></div>
+        </label>
+    </div>
+    </p>
+    <p>Distance: <input type="range" class="light-slider" name="Distance" value=""></p>
+
+    <p><input type="search" class="light-search-input" value="" placeholder="Search for help"></p>
+
+    <p>&nbsp;</p>
+</div>
+
+<ul class="dark-tab-bar">
+    <a href="../index.html">GUIDE</a>
+    <a href="settings.html" class="down">SETTINGS</a>
+</ul>
+</body>
+</html>

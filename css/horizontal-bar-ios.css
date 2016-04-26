@@ -1,0 +1,95 @@
+.equidist-button {
+    display: inline-block
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.horizontal-bar-container {
+    background-color: #04422c;
+    position: fixed;
+    height: 2.8rem;
+    width: 100%;
+    z-index: 9
+}
+
+.horizontal-bar-container a {
+    vertical-align: middle;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 1rem;
+    height: 2rem;
+    width: 23%;
+    text-align: center
+}
+
+.horizontal-bar-container a i {
+    padding-left: 3px;
+    position: relative;
+    top: -5px;
+    font-size: 1.5rem
+}
+
+.horizontal-bar-container a:hover {
+    background: #04422c
+}
+
+.horizontal-bar-container a:active {
+    background: #04422c;
+    color: black
+}
+
+.horizontal-bar-container a.disabled {
+    color: grey
+}
+
+.horizontal-bar-container .horizontal-bar-buttongroup {
+    background: #04422c;
+    width: 100%;
+    height: 2.8rem;
+    left: 0;
+    overflow: hidden
+}
+
+.horizontal-bar-container .horizontal-bar-buttongroup a:last-child {
+    padding-right: 10px
+}
+
+.horizontal-bar-buttongroup {
+    text-align: justify;
+    min-width: 320px;
+    font-size: 1rem;
+    height: 2.8rem
+}
+
+#homepage-toggle {
+    background-color: #b6cf33
+}
+
+.horizontal-bar-buttongroup:after {
+    content: '';
+    width: 100%;
+    display: inline-block
+}
+
+.horizontal-bar-container.top {
+    top: 0px;
+    padding-top: 20px
+}
+
+.horizontal-bar-container.bottom {
+    bottom: 0
+}
+
+@media only screen and (min-width: 1025px) {
+    .horizontal-bar-container.bottom {
+        width: 50%
+    }
+}
+
+.filter-selection-active {
+    color: #b6cf33
+}

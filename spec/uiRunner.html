@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jasmine UI Runner</title>
+
+    <!-- Include the Jasmine assets for running in an HTML page. -->
+    <link rel="stylesheet" type="text/css" href="lib/jasmine-1.2.0/jasmine.css"/>
+    <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine.js"></script>
+    <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="../lib/handlebars.runtime.js"></script>
+
+    <!-- include spec files here... -->
+    <script type="text/javascript" src="helpers/mainhelper.js"></script>
+
+    <link href="../css/filter.css" rel="stylesheet" type="text/css">
+    <link href="../css/horizontal-bar.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/foldout-menu-top.css" rel="stylesheet" type="text/css">-->
+    <link href="../css/house.css" rel="stylesheet" type="text/css">
+    <link href="../css/infoview.css" rel="stylesheet" type="text/css">
+    <link href="../font/accessibility.css" rel="stylesheet" type="text/css">
+    <link href="../css/listview.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/mainview-bottom-menu.css" rel="stylesheet" type="text/css">-->
+    <link href="../css/message-bar.css" rel="stylesheet" type="text/css">
+    <link href="../css/mapview.css" rel="stylesheet" type="text/css">
+    <link href="../css/pages.css" rel="stylesheet" type="text/css">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/top-coat-addons.css" rel="stylesheet" type="text/css">
+    <link href="../css/topcoat-mobile-light.css" rel="stylesheet" type="text/css">
+
+    <link href="../lib/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript">
+
+        var require = {
+
+            baseUrl: './../',
+
+            paths: {
+                store: 'js/storage/MemoryStore',
+                backend: 'js/storage/LSBackend',
+                async: 'js/lib/async',
+                domReady: 'js/lib/domReady',
+                fastclick: 'js/lib/fastclick',
+                "gmaps": "js/lib/google_maps",
+                handlebars: 'js/lib/handlebarsamd',
+                iScroll: 'js/lib/iscroll',
+                jquery: 'js/lib/jquery',
+                richmarker: 'js/lib/richmarker_req',
+                underscore: 'js/lib/underscore',
+                MapMainView: 'js/views/MapMainView',
+                text: 'js/lib/text',
+                polyfill: 'spec/helpers/test-polyfills'
+            },
+            shim: {
+                'jquery': {
+                    exports: '$'
+                },
+                gmaps: {
+                    exports: 'google'
+                },
+                'handlebars': {
+                    exports: 'Handlebars'
+                },
+                'fastclick': {
+                    exports: 'Fastclick'
+                },
+                'iScroll': {
+                    exports: 'iScroll'
+                },
+                underscore: {
+                    exports: '_'
+                }
+            }
+        };
+
+    </script>
+    <script type="text/javascript" src="../lib/require.js"></script>
+
+    <!--
+        Use RequireJS to load and execute the actual Jasmine test
+        specifications (ie. specs).
+
+        NOTE: We have to use the domReady! plugin since the Jasmine
+        reporter needs to have access to the BODY tag of the document
+        when outputting the results of the test.
+    -->
+    <script type="text/javascript">
+
+        require(
+                [
+                    "js/lib/domReady",
+//                    "spec/specs/LoginControllerSpec",
+//                    "spec/specs/NavigationSpec"
+                    "spec/specs/MainViewSpec"
+
+                ],
+                function (document) {
+
+                    // Set up the HTML reporter - this is reponsible for
+                    // aggregating the results reported by Jasmine as the
+                    // tests and suites are executed.
+                    jasmine.getEnv().addReporter(
+                            new jasmine.HtmlReporter()
+                    );
+
+                    // Run all the loaded test specs.
+                    jasmine.getEnv().execute();
+
+                }
+        );
+
+    </script>
+
+</head>
+<body>
+<div id="stage">
+    <div id="navbar"></div>
+    <div id="content"></div>
+</div>
+<!-- Left intentionally blank. -->
+</body>
+</html>

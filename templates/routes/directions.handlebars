@@ -1,0 +1,56 @@
+<nav class="horizontal-bar-container top">
+    <div class="horizontal-bar-buttongroup">
+        <a class="equidist-button" id="navbar-back-button" onclick="window.history.back();">
+            <i class="fa fa-chevron-left fa-2x"></i>
+        </a>
+
+        <a data-mode="BICYCLING" href="#" class="equidist-button modeSelect"><i class="fa fa-wheelchair fa-2x
+                        {{#if_eq 'BICYCLING' compare=mode }}
+                        active
+                        {{else}}
+                        inactive
+                        {{/if_eq}}
+        "></i></a>
+
+        <a data-mode="DRIVING" href="#" class="equidist-button modeSelect"><i class="fa  fa-fighter-jet fa-2x
+        {{#if_eq 'DRIVING' compare=mode }}
+                        active
+                        {{else}}
+                        inactive
+                        {{/if_eq}}
+        "></i></a>
+        <a data-mode="TRANSIT" href="#" class="equidist-button modeSelect">
+            <i class="fa  fa-twitter fa-2x
+            {{#if_eq 'TRANSIT' compare=mode }}
+                        active
+                        {{else}}
+                        inactive
+                        {{/if_eq}}
+            "></i></a>
+        <a data-mode="WALKING" href="#" class="equidist-button modeSelect">
+            <i class="fa fa-male fa-2x
+            {{#if_eq 'WALKING' compare=mode }}
+                        active
+                        {{else}}
+                        inactive
+                        {{/if_eq}}
+            "></i></a>
+    </div>
+
+    <!--<button class="top-foldout-button"><i class= "fa fa-reorder"></i></button>-->
+</nav>
+<div>
+    <div>
+        <span>START</span>
+        <button id="start-point" class="topcoat-button">My Location</button>
+
+    </div>
+    <div>
+        <span>END</span>
+        <button id="end-point" class="topcoat-button">House {{id}}</button>
+    </div>
+</div>
+
+<div>
+    <button id="calculate-directions-button" class="topcoat-button">Calculate</button>
+</div>

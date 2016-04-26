@@ -1,0 +1,15 @@
+<div class="note-dialog">
+    <div class="topcoat-overlay-bg"></div>
+    <aside class="topcoat-overlay">
+        <h1>Note</h1>
+
+        <div class="topcoat-overlay-buttons">
+            <button role="button" class="note-cancel topcoat-button">Cancel</button>
+            <button role="button" class="save-note topcoat-button--cta is-disabled">Save</button>
+        </div>
+
+        <textarea class="note-text topcoat-textarea" rows="7" cols="18"
+                  placeholder="{{#unless this.note}}Enter note here.{{/unless}}">{{#if this.note}}{{this.note}}{{/if}}</textarea>
+
+    </aside>
+</div>

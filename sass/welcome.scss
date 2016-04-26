@@ -1,0 +1,289 @@
+@import "horizontal-bar";
+@import "globalDimensions";
+
+.welcome {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B0000000, endColorstr=#B0000000);
+  //  font-family: "Helvetica Neue";
+
+  position: fixed;
+  bottom: $toolBarHeight;
+  left: 0;
+  right: 0;
+  top: $navbarPaddingTop;
+  width: 100%;
+  z-index: 800;
+  height: 100%;
+
+}
+
+.welcomeBody {
+  margin: 2* $pagePaddingTop+$navbarPaddingTop+4px 0;
+  padding-left: 20px;
+
+  .close {
+    margin-right: 25px;
+    color: #ffffff;
+  }
+}
+.welcomeBody.final {
+  margin: 2* $pagePaddingTop+$navbarPaddingTop+4 - 40px 0;
+}
+
+.welcomeBody.bottom {
+  position: absolute;
+  bottom: $toolBarHeight + 16px;
+}
+
+.welcomeMessage {
+  font-size: 18px;
+  margin: 18px 0 10px;
+  font-weight: bold;
+  //  width: 385px;
+  word-wrap: break-word;
+  .iconList {
+    list-style-type: none;
+    li i {
+      padding: 10px;
+    }
+  }
+}
+
+/* Colors */
+.welcomeMessage strong, .whatsNew h2 {
+  color: #21acb6;
+  font-weight: bold;
+
+}
+
+.welcomeMessage {
+  //  right: 550px;
+  //  position: absolute;
+  //  top: 75px;
+  //  width: 370px;
+  color: #DDDDDD;
+  text-shadow: 2px 0 2px #000000;
+  z-index: 801;
+  font-variant: normal;
+  //  font-weight: 300;
+}
+
+.welcomeMessage h2 {
+  font-size: 20px;
+
+  font-weight: bold;
+  //  width: 385px;
+  word-wrap: break-word;
+}
+
+.welcomeMessage p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 125%;
+}
+
+//
+.whatsNew {
+  font-size: 16px;
+  //  position: absolute;
+  //  right: 60px;
+  //  top: 100px;
+  //  width: 380px;
+  line-height: 125%;
+  color: #DDDDDD;
+  text-shadow: 2px 0 2px #000000;
+  z-index: 801;
+}
+
+//
+//.whatsNew li {
+//  position: relative;
+//}
+//
+.whatsNew .number {
+  //  background: #15cedb;
+  //  background: -moz-linear-gradient(center top, #15cedb 0%, #0C8F98 100%);
+  //  background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#15cedb), to(#0C8F98));
+  //  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#15cedb, endColorstr=#0C8F98";
+  //  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#15cedb, endColorstr=#0C8F98);
+  //  -webkit-border-radius: 40px;
+  //  -moz-border-radius: 40px;
+  //  border-radius: 40px;
+  //  -webkit-box-shadow: 2px 2px 2px #000;
+  //  -moz-box-radius: 2px 2px 2px #000;
+  //  box-shadow: 2px 2px 2px #000;
+  //  color: #000;
+  //  font-size: 32px;
+  //  font-weight: bold;
+  //  left: -70px;
+  //  line-height: 48px;
+  //  padding: 0px 10px;
+  //  position: absolute;
+  //  text-align: center;
+  //  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  //  top: -10px;
+  //  width: 30px;
+}
+
+//
+.whatsNew h2 {
+  //  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 26px;
+  margin: 15px 0 10px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .7);
+  line-height: 120%;
+}
+
+.whatsNew li {
+  /*  clear: both; */
+  border-top: none;
+}
+
+.arrowUp {
+  background: url(../img/overview_global_nav_arrow.png) no-repeat;
+  height: 90px;
+  //  position: absolute;
+  //  right: -10px;
+  //  top: -70px;
+  width: 40px;
+  top: 3.5rem;
+  position: absolute;
+  left: 280px;
+}
+
+.arrowDown {
+  @extend .arrowUp;
+  -moz-transform: scaleX(-1) rotate(-180deg);
+  -o-transform: scaleX(-1) rotate(-180deg);
+  -webkit-transform: scaleX(-1) rotate(-180deg);
+  transform: scaleX(-1) rotate(-180deg);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  top: inherit;
+  bottom: 3rem;
+}
+
+//
+.newMenu {
+  //  border-bottom-color: rgb(221, 221, 221);
+  //  border-bottom-style: none;
+  //  border-bottom-width: 0px;
+  //  border-image-outset: 0px;
+  //  border-image-repeat: stretch;
+  //  border-image-slice: 100%;
+  //  border-image-source: none;
+  //  border-image-width: 1;
+  //  border-left-color: rgb(221, 221, 221);
+  //  border-left-style: none;
+  //  border-left-width: 0px;
+  //  border-right-color: rgb(221, 221, 221);
+  //  border-right-style: none;
+  //  border-right-width: 0px;
+  //  border-top-color: rgb(221, 221, 221);
+  //  border-top-style: none;
+  //  border-top-width: 0px;
+  color: rgb(221, 221, 221);
+  //  display: block;
+  //  font-family: 'Helvetica Neue', Arial, sans-serif;
+  //  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  //  font-weight: 300;
+  //  height: 40px;
+  line-height: 20px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  //  margin-bottom: 20px;
+  //  margin-left: 0px;
+  //  margin-right: 0px;
+  //  margin-top: 10px;
+  //  padding-bottom: 0px;
+  //  padding-left: 0px;
+  //  padding-right: 0px;
+  //  padding-top: 0px;
+  text-align: left;
+  text-shadow: rgb(0, 0, 0) 2px 0px 2px;
+  vertical-align: baseline;
+  //  width: 380px;
+}
+
+//
+ul.iconList {
+  -webkit-padding-start: 0px;
+  -webkit-margin-before: 0px;
+}
+
+//
+.newMenu li {
+  clear: none;
+  float: left;
+  width: 100px;
+  border-top: none;
+}
+
+/* clearfix is applied to the parent containing floating children */
+.clearfix:after, .clearfixParent > div:after, .clearfixParent > li:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix, .clearfixParent > div, .clearfixParent > li {
+  display: inline-block;
+}
+
+/* Hide from IE Mac \*/
+.clearfix, .clearfixParent > div, .clearfixParent > li {
+  display: block;
+}
+
+.welcome .button {
+  background: transparent;
+  border: none;
+  border-bottom: 1px #21ACB6 dotted;
+  color: #21ACB6;
+  //  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 0;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .7);
+}
+
+.horizontal-bar-container.undertop {
+  top: $menuHeightTotal + $navbarPaddingTop;
+  z-index: 799;
+  font-size: 12px;
+}
+
+.welcome.horizontal-bar-container.top {
+  font-size: 12px;
+}
+
+.horizontal-bar-container.abovebottom {
+  bottom: $menuHeightTotal;
+  z-index: 799;
+}
+
+.welcomeFootnote {
+  @extend .welcomeMessage;
+  padding-left: 20px;
+  position: absolute;
+  bottom: 0;
+  p {
+    font-size: 11px;
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+  }
+}
+
+#startApp, #previousView, #nextView {
+  font-size: 20px;
+}
+
+.float-right {
+  float: right;
+}
+

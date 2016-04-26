@@ -1,0 +1,109 @@
+//@mixin highdensity {
+//~ "only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+//~ "only screen and (min--moz-device-pixel-ratio: 1.5)",
+//~ "only screen and (-o-min-device-pixel-ratio: 3/2)",
+//~ "only screen and (min-device-pixel-ratio: 1.5)");
+//}
+//
+//@mixin mobile {
+//~ "only screen and (max-width: 529px)";
+//}
+//
+//@mixin tablet {
+//~ "only screen and (min-width: 530px) and (max-width: 949px)";
+//}
+//
+//@mixin desktop {
+//~ "only screen and (min-width: 950px) and (max-width: 1128px)";
+//}
+//
+//@mixin desktop-xl {
+//~ "only screen and (min-width: 1129px)";
+//}
+//(min-device-width: )
+
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1025px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+      @content;
+    }
+  } @else if $media == wide-screens {
+    // @if DEVICE == 'ios'
+    @media only screen and (min-width: $break-medium ) {
+      @content;
+    }
+    //  @endif
+
+    // @if DEVICE != 'ios'
+    @media only screen and (min-width: $break-medium ) {
+      @content;
+    }
+    //  @endif
+
+  }
+}
+
+/*
+1280*800
+1280*768
+1024*600
+1024*800
+1024*768
+800*400
+800*480
+*/
+// @if DEVICE == 'ios'
+$deviceHeights: (iphone4 480px, iphone5 568px, ipadLandscape 768px, ipadPortrait 1024px);
+@mixin height-omatic($topMarging, $bottomMargin) {
+  @each $deviceHeight in $deviceHeights {
+    $height: nth($deviceHeight, 2);
+    @media screen and (min-height: $height){
+      height: $height - ($topMarging + $bottomMargin);
+    }
+  }
+}
+//  @endif
+
+@mixin device-height-omatic($topMarging, $bottomMargin) {
+  @each $deviceHeight in $deviceHeights {
+    $height: nth($deviceHeight, 2);
+    @media screen and (min-device-height: $height){
+      height: $height - ($topMarging + $bottomMargin);
+    }
+  }
+}
+// @if DEVICE != 'ios'
+$deviceHeights: (a0 320, a1 400, a01 432, iphone4 480px, kitkat 567px, iphone5 568px, a15 640, a2 800, a25 854, a3 960, ipad 1024px , a4 1152, a5 1200, a6 1536, a7 1600);
+@mixin height-omatic($topMarging, $bottomMargin) {
+  @each $deviceHeight in $deviceHeights {
+    $height: nth($deviceHeight, 2);
+    @media screen and (min-height: $height){
+      height: $height - ($topMarging + $bottomMargin);
+    }
+  }
+}
+//  @endif
+
+
+
+
+
+
+$deviceWidths: (iphone 320px, ipad 768px );
+
+@mixin width-omatic($leftMarging, $rightMargin) {
+  @each $deviceWidth in $deviceWidths {
+    $width: nth($deviceWidth, 2);
+    @media screen and (min-width: $width) {
+      width: $width - ($leftMarging + $rightMargin);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "globalDimensions";
+@import "scrolls";
+@import "layout";
+@import "devices";
+
+div.form {
+  label, input {
+    display: block;
+  }
+}
+
+label {
+  vertical-align: bottom;
+}
+
+#login-username-text, #login-password-field, #reg-email-tf, #reg-name-tf {
+  @include width-omatic(2 * $pageLeftPadding, 0px);
+  margin-bottom: 10px;
+}
+
+#login-continue-unregistered {
+//  position: absolute;
+//  bottom: 20px;
+
+//  margin-left: -80px;
+  //  @extend .clearfix;
+}
+
+.field-container {
+  label {
+    width: 7rem;
+    float: left;
+  }
+  input[type=text], input[type=password ] {
+    width: 19rem;
+  }
+}
+
+.field-container-longtext {
+  @extend .field-container;
+  label {
+    width: 9rem;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 1.3rem;
+
+  }
+  button {
+    width: 9rem;
+  }
+  margin-top: 15px;
+}
+
+.checkbox-container {
+  label {
+    font-size: 1.1rem;
+  }
+}
+
+.password-field {
+  -webkit-text-security: disc;
+}
+
+#registration-button-field {
+  label {
+    width: 3rem;
+  }
+  margin-top: 15px;
+}
+
+#login-login-button {
+  //  margin-left: 0.3rem;
+  margin-top: 10px;
+  width: 8rem;
+
+}
+
+#login-register-button {
+  margin-top: 10px;
+  width: 8rem;
+}
+
+.disclaimer {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 0 10px;
+
+}
+
+.centered-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+
+#img-planet-bristol {
+  width: 320px;
+}
+
+.first-element {
+  margin-top: 10px;
+}
+
+.login-logo {
+  float: left;
+}
+
+.login-title {
+  float: left;
+  font-size: 38px;
+  margin-top: 45px;
+}
+
+.login-header {
+  @extend .clearfix;
+}
+
+.forget-password {
+  float: right;
+  max-width: 120px;
+  padding-right: 15px;
+  padding-top: 15px;
+  text-decoration: none;
+}
+.forget-password:link{
+  color: #000000;
+}
+
+#email-reset-tf {
+  margin-bottom: 10px;
+}
+
+.login-start-pwReset{
+  padding: 10px;
+}

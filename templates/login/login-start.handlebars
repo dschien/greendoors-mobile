@@ -1,0 +1,47 @@
+<div id="registration-reminder-view">
+    <div class="scroll-content">
+        <div class="login-header">
+            <img src="img/logo.gif" class="login-logo" width="50">
+
+            <h2 class="login-title">Greendoors</h2>
+        </div>
+
+        <div class="disclaimer">Registration allows you to save houses for future reference, contact home owners, and
+            use QR codes to get a personalised report about retrofitting measures. You’ll also avoid seeing this screen
+            again.
+        </div>
+
+
+        <div class="field-container-longtext">
+            <button id="reg-login-button" class="topcoat-button--cta"
+                    onclick="(
+                                function(){ require(['backbone'],
+                                    function(Backbone){
+                                        Backbone.history.navigate('login', {replace:true, trigger:true});
+                                    })
+                                }
+                            )();"
+                    >Login</button>
+            <button id="reg-remind-reg-button" class="topcoat-button"
+                    onclick="(
+                                function(){ require(['backbone'],
+                                    function(Backbone){
+                                        Backbone.history.navigate('register', {replace:true, trigger:true});
+                                    })
+                                }
+                            )();"
+                    >
+                Register
+            </button>
+        </div>
+        <div class="field-container-longtext">
+            <a class="login-start-pwReset" href="#passwordReset">Forget username or password?</a>
+        </div>
+        <div class="field-container-longtext">
+            <label for="reg-remind-guest-button">No thanks, just the</label>
+            <button id="reg-remind-guest-button" class="topcoat-button" onclick="window.location.hash='guestMode'">Basic
+                App
+            </button>
+        </div>
+    </div>
+</div>

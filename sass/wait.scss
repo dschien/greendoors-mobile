@@ -1,0 +1,80 @@
+@import "devices";
+
+.waitScreen {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B0000000, endColorstr=#B0000000);
+  bottom: 0;
+  font-family: "Helvetica Neue";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 800;
+}
+
+.waitMessage {
+  //  right: 550px;
+  position: absolute;
+  //  top: 75px;
+  //  width: 370px;
+  color: #DDDDDD;
+  text-shadow: 2px 0 2px #000000;
+  z-index: 801;
+  font-size: 64px;
+  margin: 18px 0 10px;
+  font-weight: bold;
+  width: 385px;
+  word-wrap: break-word;
+
+  h1 {
+    font-size: 38px;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    margin: 25px auto;
+    width: 200px;
+  }
+  p {
+    margin: 5px auto;
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 125%;
+    width: 200px;
+
+  }
+  div.spinner {
+    width: 22px;
+    margin: 5px auto;
+  }
+}
+
+.activity {
+  -moz-border-radius: 10px; /* for Firefox */
+  -webkit-border-radius: 10px; /* for Webkit-Browsers */
+  border-radius: 10px; /* regular */
+  opacity: 0.5; /* Transparent Background 50% */
+
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 100px;
+  height: 50px;
+  /*margin: auto;*/
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  content: "undefined";
+  /*top: 50%;*/
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+
+  padding-top: 12px;
+  text-align: center;
+
+  z-index: 99;
+}

@@ -1,0 +1,194 @@
+.scroll-wrapper {
+    padding-top: 0px;
+    z-index: 1;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+.scroll-content {
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding-left: 15px
+}
+
+.page {
+    position: absolute;
+    top: 0px;
+    bottom: 0px
+}
+
+@media only screen and (max-width: 768px) {
+    .page {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .page {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .page {
+        width: 50%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-center {
+        left: 0
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .page-center {
+        left: 0
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .page-center {
+        left: 0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-left {
+        left: -100%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .page-left {
+        left: -100%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .page-left {
+        left: -100%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-right {
+        left: 100%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .page-right {
+        left: 100%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .page-right {
+        left: 100%
+    }
+}
+
+.homePage {
+    margin-top: 0px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.homePage ::-webkit-scrollbar {
+    display: none
+}
+
+.detailsPage {
+    margin-top: 0px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0px
+}
+
+.detailsPage ::-webkit-scrollbar {
+    display: none
+}
+
+.menu-page {
+    margin-top: 0px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.menu-page ::-webkit-scrollbar {
+    display: none
+}
+
+.home-left {
+    position: relative;
+    float: left
+}
+
+@media only screen and (max-width: 768px) {
+    .home-left {
+        width: 100%;
+        left: -100%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .home-left {
+        width: 100%;
+        left: -100%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .home-left {
+        width: 50%;
+        left: -50%
+    }
+}
+
+.home-center {
+    position: absolute;
+    width: 100%;
+    float: right;
+    height: 100%
+}
+
+@media only screen and (max-width: 768px) {
+    .home-center {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .home-center {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .home-center {
+        left: 0px
+    }
+}
+
+.transition {
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -moz-transition-duration: .375s;
+    -o-transition-duration: .375s
+}
+
+.transition-slow {
+    -webkit-transition-duration: 2.25s
+}
+
+.house-property-label {
+    font-weight: bold
+}

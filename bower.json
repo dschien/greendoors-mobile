@@ -1,0 +1,28 @@
+{
+    "name": "greendoors-app",
+    "version": "0.0.0",
+    "main": "index.html",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~2.1.0",
+        "fastclick": "0.6.9",
+        "handlebars": "1.3.0",
+        "requirejs": "~2.1.10",
+        "requirejs-plugins": "~1.0.2",
+        "iscroll": "4.2.5",
+        "underscore": "~1.5.2"
+    },
+    "install": {
+        "path": "js/lib",
+        "sources": {
+            "requirejs": "bower_components/requirejs/require.js",
+            "iscroll": "bower_components/iscroll/src/iscroll.js"
+        }
+    }
+}

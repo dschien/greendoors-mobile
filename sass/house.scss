@@ -1,0 +1,185 @@
+@import "layout";
+@import "globalColours";
+@import "globalDimensions";
+@import "devices";
+
+.home-image {
+  padding-left: 5px;
+  //margin-right: 5px;
+  float: left;
+}
+
+.home-header {
+  @extend .clearfix;
+  width: 100%;
+  margin-bottom: 25px;
+
+  .properties {
+    dt, dd {
+      //font-family: sans-serif;
+    }
+    dt {
+      float: left;
+      clear: left;
+      //text-align:right;
+      width: 9rem;
+      //width: 140px;
+      //color:#bbb;
+      font-weight: 600;
+    }
+    dd {
+      -webkit-margin-start: 0px;
+      float: left;
+      //margin-left: 3em;
+      color: $iconColor;
+      vertical-align: bottom;
+    }
+  }
+
+}
+
+.house-actions {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+  max-width: 180px;
+  button.topcoat-icon-button {
+    width: 55px;
+    i.topcoat-icon {
+      height: 2rem;
+      width: 2.1rem;
+    }
+    i.topcoat-icon.star-icon {
+      //      left:1px;
+      //      top:2px;
+    }
+    i.topcoat-icon.road-icon {
+      left: -3px;
+    }
+    i.topcoat-icon.position-icon {
+      left: -1px;
+    }
+    i.topcoat-icon.note-icon {
+      //      left:1px;
+    }
+  }
+}
+
+.home-address {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.home-action-button {
+  //float: left;
+}
+
+.home-header:after {
+  clear: both;
+}
+
+a i.icon-envelope-alt {
+  font-size: 2.4rem;
+}
+
+.measures {
+  margin-top: 20px;
+}
+
+.measure-body {
+  vertical-align: top;
+  display: inline-block;
+  i {
+    color: $iconColor;
+  }
+  width: 210px;
+}
+
+.measure-head {
+  margin-left: 5px;
+  height: 1.6rem; /*Specify Height*/
+  width: 1.5rem; /*Specify Width*/
+  //border: 1px solid black; /*Add 1px solid border, use any color you want*/
+  background-color: hsla(1, 0, 0, 0.1); /*Add a background color to the box*/
+  text-align: right; /*Align the text to the center*/
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+
+}
+
+.topcoat-overlay p {
+  text-align: left;
+}
+
+.cost {
+  padding-left: 10px;
+  position: relative;
+  left: 40%;
+}
+
+.disruption {
+
+}
+
+.adults {
+  font-size: 2rem;
+  color: $iconColor;
+}
+
+.children {
+  font-size: 1rem;
+  color: $iconColor;
+}
+
+.close-popout {
+  position: relative;
+  float: right;
+  top: 30px;
+  right: 30px;
+}
+
+.popout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  z-index: 1000;
+
+  aside {
+    margin-top: 40px;
+    h1 {
+      width: 200px;
+      margin: auto;
+    }
+    p {
+      width: 250px;
+      margin: auto;
+    }
+  }
+}
+
+.booking-link {
+  color: royalblue;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.house-view {
+  @include respond-to(wide-screens) {
+    background-color: white;
+  }
+
+}
+
+.house-list-item.selected {
+  @include respond-to(wide-screens) {
+    background-color: white;
+  }
+}

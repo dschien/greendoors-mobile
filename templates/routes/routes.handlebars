@@ -1,0 +1,21 @@
+<div id="routes-main" class="scroll-wrapper">
+    <div class="scroll-content menu">
+        <button class=" topcoat-button" onclick="window.location.hash='#routes/planning/map'">Plan on map</button>
+        <button class=" topcoat-button" onclick="window.location.hash='#routes/lists'">From Lists</button>
+        <button class=" topcoat-button" onclick="window.location.hash='#routes/legs/start'">Select Start
+            <i class="fa
+            {{#if this.start}}
+                fa-check-square-o
+            {{else}}
+                fa-edit
+            {{/if}} route-plan-icon"></i></button>
+        <button class=" topcoat-button" onclick="window.location.hash='#routes/legs/end'">Select End
+            <i class="fa
+            {{#if this.end}}
+                fa-check-square-o
+            {{else}}
+                fa-edit
+            {{/if}} route-plan-icon"></i>
+        </button>
+    </div>
+</div>

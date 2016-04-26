@@ -1,0 +1,19 @@
+<div id="note-view" class="text-area-view scroll-wrapper">
+    <div class="scroll-content" parsley-validate parsley-bind>
+
+        <h1>Note</h1>
+
+        <div class="topcoat-overlay-buttons">
+            <button id="note-cancel-button" role="button" class="topcoat-button">Cancel</button>
+            <button id="save-note-button" role="button" class="topcoat-button--cta"
+                    {{#unless this.text}}disabled{{/unless}}>Save
+            </button>
+        </div>
+
+        <textarea id="note-text" rows="7" cols="17"
+                  placeholder="{{#unless this.text}}Enter note here.{{/unless}}"
+                  parsley-maxlength="1000">{{#if this.text}}{{this.text}}{{/if}}</textarea>
+
+
+    </div>
+</div>

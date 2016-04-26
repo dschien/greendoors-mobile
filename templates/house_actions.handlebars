@@ -1,0 +1,52 @@
+{{#if_eq this.contact compare=0}}
+{{else }}
+    <button class="home-action-button topcoat-icon-button send-message"
+        {{#if guestMode}}
+            disabled
+        {{/if}}><i
+            class="topcoat-icon fa fa-envelope-o fa-2x"></i></button>
+{{/if_eq}}
+
+
+<button class="topcoat-icon-button toggle-favourite"
+    {{#if guestMode}}
+        disabled
+    {{/if}}>
+    <i class="topcoat-icon star-icon fa fa-2x
+                        {{#if this.fav}}
+                        fa-star
+                        {{else}}
+                        fa-star-o
+                        {{/if}}"
+            ></i>
+</button>
+
+
+<button class="home-action-button topcoat-icon-button take-note"
+    {{#if guestMode}}
+        disabled
+    {{/if}}
+        >
+    <i class="topcoat-icon note-icon fa fa-2x
+                        {{#if this.note}}
+                        fa-file
+                        {{else}}
+                        fa-file-o
+                        {{/if}}"
+            ></i>
+</button>
+
+
+<button class="topcoat-icon-button showon-map"
+    {{#if offline}}
+        disabled
+    {{/if}}>
+    <i class="topcoat-icon position-icon fa fa-map-marker fa-2x"></i>
+</button>
+
+<button class="home-action-button topcoat-icon-button route-there"
+    {{#if offline}}
+        disabled
+    {{/if}}><i
+        class="topcoat-icon road-icon fa fa-road fa-2x"></i></button>
+

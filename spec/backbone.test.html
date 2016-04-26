@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!-- Enables or disables automatic detection of possible phone numbers in a webpage in Safari on iOS.
+    By default, Safari on iOS detects any string formatted like a phone number and makes it a link that calls the number. Specifying telephone=no disables this feature.
+    -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--prevent pinch and zoom-->
+
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <link rel="stylesheet" type="text/css" href="lib/jasmine-1.2.0/jasmine.css"/>
+    <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine.js"></script>
+    <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="../lib/handlebars.runtime.js"></script>
+    <!-- include spec files here... -->
+    <script type="text/javascript" src="helpers/mainhelper.js"></script>
+
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+
+    <!-- libs -->
+    <link href="../lib/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/topcoat-mobile-light.css" rel="stylesheet" type="text/css">-->
+
+    <!-- specific -->
+    <link href="../css/media.css" rel="stylesheet" type="text/css">
+    <link href="../css/filter.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/house.css" rel="stylesheet" type="text/css">
+    <link href="../css/infoview.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/listview.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <link href="../css/mapview.css" rel="stylesheet" type="text/css">
+    <link href="../css/message-bar.css" rel="stylesheet" type="text/css">
+    <link href="../css/menu.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/routes.css" rel="stylesheet" type="text/css">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/text-area-view.css" rel="stylesheet" type="text/css">
+    <!--<link href="../css/top-coat-addons.css" rel="stylesheet" type="text/css">-->
+    <link href="../css/topcoat-mobile-light.css" rel="stylesheet" type="text/css">
+    <link href="../css/wait.css" rel="stylesheet" type="text/css">
+    <link href="../css/welcome.css" rel="stylesheet" type="text/css">
+    <link href="../css/validation.css" rel="stylesheet" type="text/css">
+
+
+    <!-- @if DEVICE == 'all' -->
+    <link href="../css/horizontal-bar.css" rel="stylesheet" type="text/css">
+    <!--<link href="../css/pages-multicol.css" rel="stylesheet" type="text/css">-->
+    <link href="../css/pages.css" rel="stylesheet" type="text/css">
+    <!-- @endif -->
+
+    <!-- @if DEVICE == 'ios' !>
+    <link href="../css/horizontal-bar-ios.css" rel="stylesheet" type="text/css">
+    <link href="../css/pages-ios.css" rel="stylesheet" type="text/css">
+    <!-- @endif -->
+    <script type="text/javascript" src="../cordova-polyfill.js"></script>
+    <script type="text/javascript" src="../lib/handlebars.runtime.js"></script>
+    <script type="text/javascript" src="../lib/HandlebarHelpers.js"></script>
+    <script src="../lib/require.js"></script>
+
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">-->
+
+    <script>
+        greendoors = {}
+        greendoors.requireLibSettings = {
+//            gmaps: "js/lib/google_maps",
+//              gmaps: "test/lib/google_maps_stub",
+
+//            richmarker: 'js/lib/richmarker_req',
+//            richmarker: 'test/lib/richmarker_req',
+            baseUrl: './../'
+        }
+
+
+    </script>
+
+
+    <!-- @if NODE_ENV == 'BROWSER' -->
+    <script>
+        define('settings', function () {
+            return {
+//                server : "https://greendoors-dev.cs.bris.ac.uk/"
+//                server : "https://greendoors.cs.bris.ac.uk/"
+                server: "https://dgd/"
+            };
+        });
+        //        require.config({baseUrl: './../'});
+        require(["../config-test"]);
+        //        require(["app/app"]);
+    </script>
+    <!-- @endif -->
+
+    <!--
+        Use RequireJS to load and execute the actual Jasmine test
+        specifications (ie. specs).
+
+        NOTE: We have to use the domReady! plugin since the Jasmine
+        reporter needs to have access to the BODY tag of the document
+        when outputting the results of the test.
+    -->
+    <script type="text/javascript">
+
+        require(
+                [
+//                    "spec/js/lib/domReady",
+                    "../spec/specs/LoginControllerSpec"
+//                    "spec/specs/NavigationSpec"
+//                    "../spec/specs/JavascriptLearningSpec"
+
+                ],
+                function (document) {
+
+                    // Set up the HTML reporter - this is reponsible for
+                    // aggregating the results reported by Jasmine as the
+                    // tests and suites are executed.
+                    jasmine.getEnv().addReporter(
+                            new jasmine.HtmlReporter()
+                    );
+
+                    // Run all the loaded test specs.
+                    jasmine.getEnv().execute();
+
+                }
+        );
+
+    </script>
+
+    <title>Green Doors</title>
+
+</head>
+<body>
+<div id="stage">
+    <div id="navbar"></div>
+    <div id="content"></div>
+</div>
+
+<!--<script src="http://jsconsole.com/remote.js?dschien35153"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div id="settings" class="scroll-wrapper">
+    <div class="scroll-content">
+        <!--<p></p>-->
+        <!--<button id="info-networkon-button" class=" topcoat-button">Network On</button>-->
+        <!--<button id="info-networkoff-button" class=" topcoat-button">Network Off</button>-->
+
+        <!--<p>Enable access to current location to order map and lists by proximity:-->
+
+        <!--<div class="slide-switch-container">-->
+        <!--<input type="checkbox" name="light-switch" id="slideswitch-location" {{checked location_enabled}}>-->
+        <!--<label class="light-slide-switch" for="slideswitch-location">-->
+        <!--<div class="on-off"></div>-->
+        <!--<div class="switch"></div>-->
+        <!--</label>-->
+        <!--</div>-->
+        <!--</p>-->
+
+            <!--{{#if location_enabled}}-->
+        <!--<p>Current Location: <span id="latitude">{{position.latitude}}</span>, <span-->
+        <!--id="longitude">{{position.longitude}}</span></p>-->
+            <!--{{/if}}-->
+        <p>Version: {{version}}</p>
+
+        <p>You can delete local data, including your registration information, all houses, notes and favourites.
+            Data synced with greendoors.cs.bris.ac.uk will still be available.</p>
+        <button id="info-dellogin-button" class=" topcoat-button" onclick="javascript:localStorage.clear();">Delete
+            local data
+        </button>
+
+        <!--<p>Increase or decrease font size</p>-->
+
+        <!--<button id="increase-font-size" class="topcoat-button">+</button>-->
+        <!--<button id="decrease-font-size" class="topcoat-button">-</button>-->
+        <button id="info-back-button" class="topcoat-button" onclick="window.history.back()">Back</button>
+
+    </div>
+</div>

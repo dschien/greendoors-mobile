@@ -1,0 +1,38 @@
+<div>
+    <div class="list-home-address">
+        {{this.address}}
+        {{#if_lteq this.accessibility compare=1}}
+            <!--no access-->
+            {{#if_lteq this.accessibility compare=0}}
+                <i class="fa fa-wheelchair accessibility-none"></i>
+            {{else}}
+                <i class="fa fa-wheelchair accessibility-partial"></i>
+            {{/if_lteq}}
+        {{else}}
+            <i class="fa fa-wheelchair accessibility-full"></i>
+        {{/if_lteq}}
+    </div>
+
+</div>
+<div class="home-header">
+    <img src="{{baseUrl}}img/houses/house_{{this.id}}.png" class="home-image" width="100" height="100"/>
+    <!--<img src="data:image/jpeg;base64,{{this.image}}" class="home-image" width="100" height="100"/>-->
+
+    <div class="home-right-float">
+
+        <div class="opening-times">
+            {{#if_eq this.booking compare=0}}
+                <span>{{open_enum day}}</span>
+                <span>{{time_enum time}}</span>
+            {{else}}
+                Booking required.
+            {{/if_eq}}
+
+        </div>
+
+        <div class="house-actions" data-id="{{id}}">
+            <!--Contains subview-->
+        </div>
+    </div>
+</div>
+<!--<hr>-->

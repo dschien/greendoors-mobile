@@ -1,0 +1,95 @@
+@import "devices";
+@import "scrolls";
+@import "layout";
+@import "globalDimensions";
+// @if DEVICE == 'ios'
+@import "specificDimensions-ios";
+//  @endif
+// @if DEVICE != 'ios'
+@import "specificDimensions-all";
+
+//  @endif
+
+[class^="accessibility-"] {
+  display: inline-block;
+  float: right;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.accessibility-full, .accessibility-none {
+  color: #87c53d;
+}
+
+.accessibility-partial {
+  color: #465e8e;
+}
+
+#list-main-view {
+  padding-bottom: $toolBarHeight;
+  //height: 500px;
+  //  -webkit-overflow-scrolling: touch;
+  a {
+    text-decoration: none;
+    //pointer-events: none;
+    cursor: default;
+  }
+}
+
+ul.house-list {
+  @include height-omatic($pagePaddingTop+$navbarPaddingTop, $paddingBottom);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  //background-color: #fafafa;
+  //  border-bottom: 1px solid #e0e0e0;
+
+  li {
+    display: block;
+    border-top: 1px solid #c0c0c0;
+    //padding: 10px;
+    //display: -webkit-box;
+    //display: -moz-box;
+    //display: box;
+    //width: 100%;
+  }
+}
+
+.home-header {
+  margin-bottom: 3px;
+  img {
+    margin-right: 10px;
+    float: left
+  }
+}
+
+.home-right-float {
+  float: right;
+  .opening-times {
+    vertical-align: top;
+    text-align: right;
+    .label {
+      font-weight: bold;
+    }
+    padding-bottom: 5px;
+
+    padding-right: 10px;
+
+    @media only screen and (max-width: 600px) {
+      max-width: 180px;
+    }
+    font-size: 13px;
+  }
+  .home-actions {
+    margin-top: 10px;
+  }
+}
+
+.list-home-address {
+  text-align: justify;
+  font-size: 1.2rem;
+  margin: 5px;
+  display: inline-block;
+}
+

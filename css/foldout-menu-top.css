@@ -1,0 +1,101 @@
+.equidist-button {
+    display: inline-block
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.top-foldout-container {
+    position: fixed;
+    height: 3rem;
+    width: 100%;
+    z-index: 9
+}
+
+.top-foldout-container a {
+    vertical-align: top;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.8rem
+}
+
+.top-foldout-container a#navbar-back-button {
+    margin-top: -3px;
+    padding: 0 10px
+}
+
+.top-foldout-container a i {
+    padding-left: 3px;
+    position: relative;
+    top: -5px;
+    font-size: 1.5rem
+}
+
+.top-foldout-container a:hover {
+    background: #a93a70
+}
+
+.top-foldout-container a:active {
+    background: #a93a70;
+    color: #a93a70
+}
+
+.top-foldout-container .top-foldout-menu-buttongroup {
+    background: #a93a70;
+    width: 100%;
+    height: 3rem;
+    left: 0;
+    overflow: hidden
+}
+
+.top-foldout-container .top-foldout-button {
+    position: relative;
+    float: right;
+    top: 0px;
+    margin: 0px 10px;
+    z-index: 9;
+    background-color: #a93a70;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 3.5rem;
+    height: 3.5rem;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    border: none
+}
+
+.top-foldout-container .top-foldout-menu-buttongroup a:last-child {
+    padding-right: 10px
+}
+
+.top-foldout-menu-buttongroup {
+    text-align: justify;
+    min-width: 320px;
+    font-size: 1.2rem;
+    height: 3rem
+}
+
+.top-foldout-menu-buttongroup:after {
+    content: '';
+    width: 100%;
+    display: inline-block
+}
+
+.top-foldout-container.top {
+    top: 0px
+}
+
+.top-foldout-container {
+    top: -3rem
+}
+
+.top-foldout-container {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}

@@ -1,0 +1,73 @@
+@import "globalColours";
+@import "globalDimensions";
+@import "equidistant_mixin";
+@import "visibility";
+@import "horizontal-bar";
+
+$zindex: 2000;
+$messageBarColor: #E6E6E6;
+
+.message-bar-container {
+  @extend .horizontal-bar-container;
+
+  min-height: $toolBarHeight;
+  height: auto;
+  div {
+    margin-top: 0.4rem;
+  }
+
+  color: white;
+  background-color: $messageBarColor;
+  font-size: 1.5rem;
+  i {
+    margin-left: 20px;
+  }
+
+  #message-bar-dismiss-button {
+    //display: block;
+    position: relative;
+    float: right;
+    color: #ffffff;
+    top: 0px;
+    margin: 0px 10px;
+    z-index: $zindex;
+    background-color: $messageBarColor;
+    display: inline-block;
+    vertical-align: top;
+
+    overflow: hidden;
+    //width: $buttonWidth;
+    //height: 2.4rem;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    border: none;
+  }
+
+}
+
+.message-bar-container.show {
+  top: inherit;
+  display: block;
+}
+
+.message-bar-container {
+  display: none;
+}
+
+$easeInDuration: 0.5s;
+.message-bar-container {
+  -webkit-transition: all $easeInDuration ease-in-out;
+  -moz-transition: all $easeInDuration ease-in-out;
+  transition: all $easeInDuration ease-in-out;
+}
+
+.message-bar-container {
+  .message {
+    margin-left: 2rem;
+    //float: left;
+    background-color: $messageBarColor;
+    color: #000000;
+  }
+}
+
